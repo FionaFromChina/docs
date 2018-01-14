@@ -1,0 +1,3 @@
+- Translate
+  - [Chinese](/)
+  - [English](/en/)

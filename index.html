@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="lib/themes/vue.css">
+  <link rel="stylesheet" href="lib/plugins/docsify-copy-code/styles.css">
+</head>
+<body>
+  <div id="app"></div>
+  <!--<div data-app id="main">Please wait...</div>-->
+  <script src="lib/plugins/docsify-copy-code/index.js"></script>
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+
+      // 自定义加载
+      // el: '#main',
+
+      // 侧边栏
+      loadSidebar: true,
+      subMaxLevel: 2,
+
+      // 自定义导航
+      loadNavbar: true,
+    
+      // 封面
+      coverpage: true,
+
+      // 搜索
+      search: {
+        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+        paths: 'auto', // or 'auto'
+        placeholder: 'Type to search',
+
+        // 支持本地化
+        placeholder: {
+          '/': '搜索',
+          '/en/': 'Type to search'
+        },
+
+        noData: 'No Results!',
+
+        // 支持本地化
+        noData: {
+          '/': '找不到结果',
+          '/en/': 'No Results'
+        },
+
+        // 搜索标题的最大程级, 1 - 6
+        depth: 2
+      },
+
+      // 小屏设备下合并导航栏到侧边栏
+      mergeNavbar: true,
+
+      // 插件
+      plugins: [
+        window.DocsifyCopyCodePlugin.init()
+      ]
+      // 离线缓存 Only secure origins are allowed
+      // if(typeof navigator.serviceWorker !== 'undefined') {
+      //    navigator.serviceWorker.register('sw.js')
+      // }
+    };
+    
+  </script>
+  <script src="lib/docsify.min.js"></script>
+  <script src="lib/plugins/search.min.js"></script>
+</body>
+</html>
